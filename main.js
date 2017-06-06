@@ -1,5 +1,10 @@
 // Business Logic
+function testOne(number){
+  if(number===1){
+    return "I"
+  }
 
+}
 
 
 // User interface logic
