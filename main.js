@@ -1,8 +1,10 @@
 // Business Logic
 function lessThanFive(number){
-  if(number===1){
+  if(number===0 || number===null){
+    return "Not a number";
+  }else if(number===1){
     return "I"
-  }else(number < 5){
+  }else if(number < 5){
     return loopLessThanFive(number);
   }
 }
@@ -10,9 +12,11 @@ function lessThanFive(number){
 function loopLessThanFive(number){
   var letters="I";
   for(var i=1;i<=number;i++){
-    letters.concat("I");
+    letters+"I";
+
   }
   return letters;
+
 }
 
 
@@ -22,8 +26,11 @@ $(document).ready(function () {
   // form submit
   $("#numInputForm").submit(function () {
 
-    var numInput=parseInt($("#inputForm").val());
+    var numInput=Number($("#inputForm").val());
     $("#inputForm").val("");
+
+    var resultNum= lessThanFive(numInput);
+    console.log(resultNum);
 
 
 
