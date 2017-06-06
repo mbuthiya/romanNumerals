@@ -13,8 +13,11 @@ $(document).ready(function () {
   // form submit
   $("#numInputForm").submit(function () {
 
-    var numInput=$("#inputForm").val();
+    var numInput=parseInt($("#inputForm").val());
     $("#inputForm").val("");
+    var returnValue= testOne(numInput);
+    console.log(returnValue);
+
 
 
     event.preventDefault();
