@@ -1,9 +1,18 @@
 // Business Logic
-function testOne(number){
+function lessThanFive(number){
   if(number===1){
     return "I"
+  }else(number < 5){
+    return loopLessThanFive(number);
   }
+}
 
+function loopLessThanFive(number){
+  var letters="I";
+  for(var i=1;i<=number;i++){
+    letters.concat("I");
+  }
+  return letters;
 }
 
 
@@ -15,8 +24,7 @@ $(document).ready(function () {
 
     var numInput=parseInt($("#inputForm").val());
     $("#inputForm").val("");
-    var returnValue= testOne(numInput);
-    console.log(returnValue);
+
 
 
 
